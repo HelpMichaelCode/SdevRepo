@@ -1,0 +1,15 @@
+/*
+ * Copyright (C) 2009-2017 Lightbend Inc. <https://www.lightbend.com>
+ */
+
+ .footer { font-weight: bold; color: white; background-color: black; }
+ .sidecol { font-weight: bold; background-color: steelblue; }
+ .sidecol h2 { font-weight: bold; }
+ .midcol h1 { margin-top: 2em; text-align: center; font-weight: bold; }
+ .midcol h3 { text-align: center; color: steelblue; }
+ .redtext { color: red; }
+
+
+
+
+
