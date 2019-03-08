@@ -2,7 +2,7 @@ name := """project"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayJava)
+lazy val root = (project in file(".")).enablePlugins(PlayJava, PlayEbean)
 
 scalaVersion := "2.12.6"
 
@@ -21,6 +21,8 @@ libraryDependencies += "org.awaitility" % "awaitility" % "2.0.0" % Test
 testOptions in Test := Seq(Tests.Argument(TestFrameworks.JUnit, "-a", "-v"))
 
 libraryDependencies += "com.h2database" % "h2" % "1.4.197" 
+
+libraryDependencies ++= Seq(evolutions, jdbc)
 
 
 

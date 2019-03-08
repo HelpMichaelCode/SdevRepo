@@ -1,4 +1,25 @@
+@(projects: List[models.Projects])
 @main("Projects"){
 	<h1>Projects</h1>
-	<h3>Below is your project!</h3>
-}
+	<h4>All projects must be due in time!</h4>
+	<table class="table table-bordered table-hover table-condensed">
+		<thead>
+		<!-- The header row-->
+		<tr>
+			<th>Project ID</th>
+			<th>Project Name</th>
+			<th>Project Due Date</th>
+		</tr>
+		</thead>
+		<tbody>
+			@* Loop for creating table rows from ItemOnSale data *@
+			@for(i<-projects) {
+			   <tr>
+				  <td>@i.getProjectID</td>
+				  <td>@i.getProjectName</td>
+				  <td>@i.getDob</td>
+			   </tr>
+			}
+		 </tbody>
+	</table>
+ }
