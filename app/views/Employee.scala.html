@@ -1,0 +1,38 @@
+@(employees: List[models.Employee], projectcategory: List[models.ProjectCategory])
+@main("Employees"){
+    <h1>Employees Below</h1>
+    <div calss="col-sm-3">
+        <h4>Project Categories</h4>
+            @for(p<-projectcategory){
+                <li class="list-group-item catheight">@p.getName
+                    <span class="badge">p.getEmp.size</span>
+                </li>
+            }
+    </div>
+    <div class="col-sm-9">
+            <h4>All projects must be due in time!</h4>
+            <table class="table table-bordered table-hover table-condensed">
+                <thead>
+                <!-- The header row-->
+                <tr>
+                    <th>Employee ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Project</th>
+                </tr>
+                </thead>
+                <tbody>
+                    @* Loop for creating table rows from ItemOnSale data *@
+                    @for(i<-employees) {
+                       <tr>
+                          <td>@i.getID</td>
+                          <td>@i.getFname</td>
+                          <td>@i.getLname</td>
+                          <td>@i.getProjectCat.getName</td>
+                       </tr>
+                    }
+                 </tbody>
+            </table>
+    </div>
+	
+ }

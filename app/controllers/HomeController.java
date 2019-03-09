@@ -5,6 +5,7 @@ import play.mvc.*;
 import play.api.Environment;
 import play.data.*;
 import play.db.ebean.Transactional;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.inject.Inject;
@@ -18,9 +19,6 @@ import models.*;
  */
 public class HomeController extends Controller {
 
-    public HomeController() {
-    }
-
     public Result index() {
         return ok(index.render());
     }
@@ -30,6 +28,10 @@ public class HomeController extends Controller {
     }
     public Result departments(){
         return ok(departments.render());
+    }
+    public Result Employee(){
+        List<ProjectCategory> elist = ProjectCategory.findAll();
+        return ok(Employee.render(elist));
     }
     
 

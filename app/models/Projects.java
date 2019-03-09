@@ -5,8 +5,7 @@ import javax.persistence.*;
 import io.ebean.*;
 import play.data.format.*;
 import play.data.validation.*;
-import java.util.Calendar;
-import java.sql.Date;
+
 
 @Entity
 public class Projects extends Model {
@@ -21,8 +20,7 @@ public class Projects extends Model {
     @Constraints.Required
     private String projectDate;
 
-    
-    
+
     // Default Constructor
     public Projects() {
     }
@@ -32,9 +30,11 @@ public class Projects extends Model {
         this.projectID = projectID;
         this.projectName = projectName;
         this.projectDate = projectDate;
+      //  this.employees = employees;
     }
 
     // Accessor methods
+   
     public Long getProjectID() {
         return projectID;
     }
@@ -58,4 +58,9 @@ public class Projects extends Model {
     public static final List<Projects> findAll() {
         return Projects.find.all();
      }
+    //Generic query helper for entity Computer with id Long
+   
+
+    
+     
 }

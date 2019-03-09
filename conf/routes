@@ -17,3 +17,5 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 GET     /projects                   controllers.HomeController.projects
 
 GET     /departments                controllers.HomeController.departments
+
+GET     /Employee                   controllers.HomeController.Employee
